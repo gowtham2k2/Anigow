@@ -1,5 +1,11 @@
+html {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 12pt;
+    text-align: justify;
+}
+
 body {
-    background-color: yellow
+    background-color: #fff
 }
 
 .navbar {
@@ -24,6 +30,7 @@ body {
 
 .login {
 
+    font-size: 2 rem;
     background-color: #fff;
     display: flex;
     flex-direction: column;
