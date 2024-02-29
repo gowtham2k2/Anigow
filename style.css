@@ -5,7 +5,11 @@ html {
 }
 
 body {
-    background-color: pink
+    background-image: url(./assets/images/dbz.jpg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 .navbar {
@@ -14,30 +18,48 @@ body {
     align-items: center;
 }
 
+.navblock1,
+.navblock2 {
+    display: flex;
+    font-size: medium;
+    font-weight: 600;
+    text-align: center;
+}
+
 .navbar>.navblock1 a {
     text-decoration: none;
-    color: red;
+    width: 70px;
+    color: skyblue;
     padding: 5px;
 }
 
 .navbar>.navblock1 a:hover {
     text-decoration: none;
     color: #fff;
-    background-color: black;
-    border-radius: 40px;
+    background-color: rgba(105, 236, 248, 0.418);
+    border-radius: 20px;
     padding: 5px;
 }
 
-.login {
-
-    font-size: 2 rem;
-    background-color: #fff;
-    display: flex;
-    flex-direction: column;
-    width: 300px;
-    height: 100px;
+.navbar>.navblock2>button {
+    text-decoration: none;
+    font-size: medium;
+    font-weight: 600;
+    width: 70px;
+    border: 0;
+    padding: 5px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0);
+    color: skyblue;
 }
 
-.login>#loginbtn {
-    width: 50px;
+.navbar>.navblock2>button:hover {
+    color: #fff;
+    background-color: rgba(105, 236, 248, 0.418);
+}
+
+.navblock2>input {
+    border: 0;
+    border-radius: 20px;
+    background-color: rgba(105, 236, 248, 0.418);
 }
