@@ -1,7 +1,0 @@
-hello this project is under development....
-
-heloo im training myself to learn git...
-
-heloo brother :)
-
-hello brotha

@@ -14,52 +14,98 @@ body {
 
 .navbar {
     display: flex;
+    gap: 2rem;
     justify-content: space-between;
     align-items: center;
 }
 
-.navblock1,
-.navblock2 {
+.navblock1 {
     display: flex;
-    font-size: medium;
+    justify-content: flex-start;
+    gap: 1.5rem;
+    flex: 1;
+    max-width: 350px;
     font-weight: 600;
     text-align: center;
 }
 
-.navbar>.navblock1 a {
-    text-decoration: none;
-    width: 70px;
-    color: skyblue;
-    padding: 5px;
-}
-
-.navbar>.navblock1 a:hover {
-    text-decoration: none;
-    color: #fff;
-    background-color: rgba(105, 236, 248, 0.418);
-    border-radius: 20px;
-    padding: 5px;
-}
-
-.navbar>.navblock2>button {
-    text-decoration: none;
-    font-size: medium;
+.navblock2 {
+    display: flex;
+    gap: 0.5rem;
+    flex: 1;
+    max-width: 400px;
+    justify-content: flex-end;
     font-weight: 600;
-    width: 70px;
-    border: 0;
-    padding: 5px;
-    border-radius: 20px;
-    background-color: rgba(255, 255, 255, 0);
-    color: skyblue;
 }
 
-.navbar>.navblock2>button:hover {
+.navblock1>*,
+.navblock2>* {
+    color: rgb(134, 246, 246);
+    text-decoration: none;
+    padding: 5px 10px;
+    flex: 1 auto;
+    border-radius: 20px;
+}
+
+.navblock1>*:hover,
+.navblock2>*:hover {
+    background-color: rgba(138, 194, 194, .5);
+    border-radius: 20px;
     color: #fff;
-    background-color: rgba(105, 236, 248, 0.418);
+    transition: 500ms;
 }
 
 .navblock2>input {
+    background-color: rgba(138, 194, 194, .5);
     border: 0;
     border-radius: 20px;
-    background-color: rgba(105, 236, 248, 0.418);
+}
+
+.navblock2>button {
+    font-size: 1rem;
+    font-weight: 600;
+    background: none;
+    border: 0;
+    max-width: fit-content;
+}
+
+@media(max-width: 850px) {
+
+    html {
+        font-size: 8pt;
+    }
+
+    body {
+        background-position: 10%;
+        animation: mymove 10s infinite;
+    }
+
+    @keyframes mymove {
+        50% {
+            background-position: 100%;
+        }
+    }
+
+    .navbar {
+        align-items: start;
+    }
+
+    .navblock1 {
+        flex-flow: column nowrap;
+        align-items: start;
+        flex: 1;
+        font-size: 1rem;
+    }
+
+    .navblock2 {
+        flex-flow: column-reverse nowrap;
+        gap: 1rem;
+        align-items: end;
+        flex: 1;
+        font-size: 1rem;
+    }
+
+    .navblock2>button {
+        margin-right: 5px;
+    }
 }
